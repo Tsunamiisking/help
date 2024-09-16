@@ -1,0 +1,227 @@
+* {
+    /* margin: 0; */
+    font-family: "Stylish", serif;
+}
+h2, h4, button {
+    color: palevioletred;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: palevioletred;
+    align-items: center;
+
+}
+.bold {
+    font-weight: 700;
+}
+.logo-card {
+    margin-left: 20px;
+}
+.logo-card p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.nav-item {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    transition: .5s;
+}
+.nav-item:hover{
+    transform: scale(1.2);
+}
+
+.nav-item a {
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
+}
+.nav-item a:hover {
+   /* font-size: 19px; */
+   cursor: pointer;
+   /* font-style: italic; */
+   transition: .5s;
+}
+
+.ham{
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background-color: black;
+    border-radius: 10px;
+}
+
+@media (max-width: 760px ) {
+    .nav-item a {
+        font-size: 14px;
+    }
+    .ham {
+        display: block;
+    }.logo-card p {
+        font-size: 16px;
+    }
+    .nav-items{
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        align-items: self-end;
+        left: -100%;
+        transition: .3s;
+        background-color: palevioletred;
+        padding: 10px 50px;
+        top: 70px;
+    }
+    .nav-item a {
+        font-size: 18px;
+    }
+    .nav-item {
+        margin: 5px 0;
+
+
+    }
+    .ham.active .bar:nth-child(2) {
+        opacity: 0;
+
+    }
+    .ham.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .ham.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-items.active {
+        right: 8px;
+        left: 8px;
+    }
+}
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
+.about-us {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile-img {
+    margin: 30px;
+}
+.profile-img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    margin-bottom: 50px;
+}
+.skills .card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    /* border: 2px solid; */
+    border-radius: 5px;
+    transition: .6s;
+    box-shadow: 0 0 10px 2px rgba(167, 164, 164, 0.578);
+}
+.skills .card:hover {
+    transform: scale(1.02);
+}
+@media (max-width: 760px ) {
+    .skills {
+        grid-template-columns: 1fr 1fr;
+    }
+    .profile-img img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 10px;
+    grid-gap: 10px;
+}
+
+.projects .project {
+    padding: 10px;
+
+}
+
+@media (max-width: 700px ) {
+    .projects{
+        grid-template-columns: 1fr;
+    }
+}
+
+.recommendation {
+    /* display: flex; */
+    margin-bottom: 50px;
+    width: 100%;
+    /* flex-wrap: wrap; */
+}
+
+.recommendation .card{
+    margin: 10px 20px;
+    padding: 10px 10px;
+}
+
+/* .form-section {
+    
+} */
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+    justify-content: center;
+    align-items: center;
+}
+.form input, .form textarea {
+    width: 400px;
+    margin: 10px 0;
+    background-color: rgba(210, 210, 210, 0.812);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+    outline: none;
+    padding-top: 5px;
+    font-size: 16px;
+}
+.form input {
+    height: 20px;
+}
+.form textarea {
+    max-width: 100%;
+}
+
+.form button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+}
+
+@media (max-width: 760px) {
+    .form input {
+        width: 300px;
+    }
+    .form textarea {
+        width: 300px;
+    }
+}
